@@ -8,13 +8,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/JR1YcsZ/image-9.png"> <!--website tab icon-->
     <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script> <!--footer icons-->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!--typing animations-->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script> <!--dark mode-->
     <link href="styles.css" rel="stylesheet">
   </head>  
 
   <body>
     <header>
       <a href="frontWebPage.html">
-        <img id="logo" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZC0dMO48MrkO2YoforAk1W-Qnv8f2JW2FtoATxm6N2pD5hTVD4i-VDPojBKoUCR4NDyM-ffMuccQo6i1EU67BbdpIBNTlg0Q=w1919-h926-rw-v1">
+        <img id="logo" src="assets/images/HeaderLight.png">
       </a>
     <nav>
         <a href="officers.html">officers</a>
@@ -45,9 +46,29 @@
             backDelay: 1000,
             loop: true,
             loopCount: Infinity,
+            showCursor: false
           });
         </script>
       </section>
+
+      <script>
+        function addDarkmodeWidget() {
+          const options = {
+            time: '1.5s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: '#fff',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+          }
+
+          const darkmode = new Darkmode(options);
+          darkmode.showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+      </script>
 
       <h2 class = "about-us-h2">
         About Us
